@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-
+var server;
 app.use(express.static('public'));
 app.get('/', function (req, res) {
     res.send('Hello World!');
@@ -14,5 +14,6 @@ module.exports.start = function (cb) {
         console.log('Example app listening at http://%s:%s', host, port);
         cb();
     });
-    module.exports.stop = server.close;
+
 };
+module.exports.stop = server.close;
