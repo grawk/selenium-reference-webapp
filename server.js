@@ -14,5 +14,5 @@ module.exports.start = function (cb) {
         console.log('Example app listening at http://%s:%s', host, port);
         cb();
     });
-    module.exports.stop = server.stop;
+    module.exports.stop = server.close;
 };
