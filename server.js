@@ -1,19 +1,38 @@
 var express = require('express');
 var app = express();
-var server;
 app.use(express.static('public'));
 app.get('/', function (req, res) {
-    res.send('Hello World!');
+    res.redirect('/public/index.html');
 });
-
-module.exports.start = function (cb) {
-    var server = app.listen(3000, function () {
-        var host = server.address().address;
-        var port = server.address().port;
+app.get('/waits', function (req, res) {
+    res.redirect('/public/waits.html');
+});
+app.get('/selects', function (req, res) {
+    res.redirect('/public/selects.html');
+});
+app.get('/login', function (req, res) {
+    res.redirect('/public/login.html');
+});
+var Server = function () {
+    this.server;
+};
+Server.prototype.start = function (port, cb) {
+    if (cb === undefined) {
+        cb = port;
+        port = 3000;
+    }
+    var self = this;
+    this.server = app.listen(port, function () {
+        var host = self.server.address().address;
+        var port = self.server.address().port;
 
         console.log('Example app listening at http://%s:%s', host, port);
         cb();
     });
 
 };
-module.exports.stop = server.close;
+Server.prototype.stop = function(cb) {
+    this.server.close(cb);
+};
+
+module.exports = Server;
