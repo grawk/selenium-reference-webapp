@@ -1,0 +1,30 @@
+{
+  "name": "selenium-reference-webapp",
+  "version": "1.0.0",
+  "description": "webapp with appropriate UI elements and UX behaviors to test selenium automation",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bin": {
+      "seleniumSampleServStart": "./bin/seleniumSampleServStart"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grawk/selenium-reference-webapp.git"
+  },
+  "keywords": [
+    "selenium",
+    "reference",
+    "web",
+    "application"
+  ],
+  "author": "Matt Edelman <mattedelman@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grawk/selenium-reference-webapp/issues"
+  },
+  "homepage": "https://github.com/grawk/selenium-reference-webapp#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
