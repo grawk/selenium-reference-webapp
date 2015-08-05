@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "webapp with appropriate UI elements and UX behaviors to test selenium automation",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bin": {
-      "seleniumSampleServStart": "./bin/seleniumSampleServStart"
-    }
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "seleniumSampleServStart": "./bin/seleniumSampleServStart"
   },
   "repository": {
     "type": "git",
