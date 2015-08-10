@@ -1,6 +1,6 @@
 {
   "name": "selenium-reference-webapp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "webapp with appropriate UI elements and UX behaviors to test selenium automation",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
