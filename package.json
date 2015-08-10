@@ -10,6 +10,9 @@
     "url": "git+https://github.com/grawk/selenium-reference-webapp.git"
   },
   "main": "server.js",
+  "bin": {
+    "seleniumReferenceApp": "./bin/seleniumReferenceApp"
+  },
   "keywords": [
     "selenium",
     "reference",
